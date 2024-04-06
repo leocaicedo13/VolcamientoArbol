@@ -1,0 +1,12 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+ubicacion_archivo = "/content/Volcamientos.xlsx"
+
+# Carga los datos en un DataFrame
+df = pd.read_excel(ubicacion_archivo)
+
+#información del dataset con los tipos de datos de las columnas
+print(df.info())
