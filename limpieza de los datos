@@ -1,0 +1,27 @@
+df.duplicated()
+indices_duplicados=df.duplicated().sum()
+indices_duplicados #No hay duplicados
+
+# Verifica si hay datos duplicados y elimínalos
+df_sin_duplicados = df.drop_duplicates()
+
+# Muestra la información del DataFrame después de eliminar duplicados
+print(df_sin_duplicados.info())
+
+# Conteo de valores nulos de las columnas
+conteo_nulos = df.isnull().sum()
+
+# Muestra el conteo de valores nulos
+print(conteo_nulos)
+
+null_percentage = df.isnull().sum() / len(df) * 100
+null_percentage
+
+sns.heatmap(df.isnull(), cbar=False)
+plt.show()
+
+# Muestra las estadísticas resumidas del dataset
+estadisticas_resumidas = df.describe(include='all')
+
+# Muestra el resultado
+print(estadisticas_resumidas)
